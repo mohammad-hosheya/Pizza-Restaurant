@@ -1,0 +1,12 @@
+﻿@model AuthModel
+
+    <div class="signup-container">
+        <form class="signup-box" method="post">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Username" required asp-for="Username" />
+            <input type="password" placeholder="Password" required asp-for="Password" />
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a asp-action="Login">Log In</a></p>
+        </form>
+    </div>
+

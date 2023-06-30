@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PizzaResturant</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PizzaResturant.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="profile-img" src="~/static/profile.png" alt="">
+
+            @if (@Context.Session.GetString("Username") != null)
+            {
+                <p>@Context.Session.GetString("Username")</p>
+            }
+
+
+            <div class="search-box">
+                <form method="get"asp-controller="Home" asp-action="Search">
+                    <input type="text" name="searchTerm" placeholder="Search">
+                <button><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/search--v1.png" alt="search"></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        @*<div class="footer">*@
+            <h3>
+                Follow and contact us
+            </h3>
+ @*       </div>*@
+        <div>
+            <ul class="contact">
+                <li><a href="https://www.facebook.com/" class="Facebook" target="_blank"> <img width="40" height="40" src="https://img.icons8.com/color/40/facebook.png" alt="facebook"> </a></li>
+                <li><a href="https://www.instagram.com/" class="instagram" target="_blank"> <img width="40" height="40" src="https://img.icons8.com/fluency/40/instagram-new.png" alt="instagram"> </a></li>
+                <li><a href="https://web.whatsapp.com/" class="whatsapp" target="_blank"> <img width="40" height="40" src="https://img.icons8.com/color/40/whatsapp--v1.png" alt="whatsapp"> </a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@model AuthModel
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form method="post">
+                <input type="text" placeholder="Username" required asp-for="Username" />
+                <input type="password" placeholder="Password" required asp-for="Password" />
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a asp-action="Signup">Sign up</a></p>
+        </div>
+    </div>

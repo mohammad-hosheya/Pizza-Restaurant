@@ -1,0 +1,546 @@
+﻿/*   ------------------------------------------------Index-------------------------------------------*/
+main {
+    padding: 1em 0 0 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 300px;
+    max-height: 400px;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px #66666699;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+    .card img {
+        width: 100%;
+        height: 60%;
+    }
+
+.btn {
+    padding: 0.7em 1em;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    transition: all 0.17s linear;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    bottom: 8px;
+    left: 45%;
+}
+
+.pick-btn {
+    width: 30%;
+    padding: 0.7em 1em;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card-body {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 1em 0;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.card-body--title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.btn:active {
+    box-shadow: 0 2px 6px #66666644;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-container {
+    padding: 0 0.5em;
+}
+
+nav {
+    width: 100%;
+    background-color: #6554AF;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0 0 0.1em 0;
+}
+
+    nav p {
+        color: white;
+        margin: 0;
+    }
+
+.profile-img {
+    padding: 0.5em;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.search-box input[type="text"] {
+    height: 30px;
+    width: 400px;
+    margin-left: 50vh;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.search-box button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6554AF;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .search-box button:hover {
+        opacity: 0.8;
+    }
+
+hr {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-bottom: 5em;
+}
+
+
+h3 {
+    display: flex;
+    justify-content: center;
+    padding: 2.5em;
+    color: #333;
+}
+
+.Facebook {
+    text-decoration: none;
+    color: rgb(23, 23, 181);
+    font-size: large;
+}
+
+.instagram {
+    text-decoration: none;
+    color: rgb(187, 24, 24);
+    font-size: large;
+}
+
+.whatsapp {
+    text-decoration: none;
+    color: rgb(12, 189, 12);
+    font-size: large;
+}
+
+/*   ------------------------------------------------Login-------------------------------------------*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.login-box {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    padding: 20px 40px 20px 20px;
+}
+
+    .login-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        box-shadow: 0 1px 8px #66666662;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .login-box button {
+        width: 100%;
+        background-color: blueviolet;
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 1px 8px #66666662;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .login-box button:hover {
+            background-color: blueviolet;
+            opacity: 0.8;
+        }
+
+    .login-box p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+/*   ------------------------------------------------SignUp-------------------------------------------*/
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-box {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    padding: 20px 40px 20px 20px;
+}
+
+    .signup-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .signup-box input[type="text"],
+    .signup-box input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        box-shadow: 0 1px 8px #66666662;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .signup-box button {
+        width: 100%;
+        background-color: blueviolet;
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 1px 8px #66666662;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer
+    }
+
+        .signup-box button:hover {
+            background-color: blueviolet;
+            opacity: 0.8;
+        }
+
+    .signup-box p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+
+/*   ------------------------------------------------Order-------------------------------------------*/
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table, th, tr, td {
+    border: 1px solid;
+    text-align: left;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+.box {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px #66666699;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.total-box {
+    width: 150px;
+    height: 25px;
+    padding: 0.2em;
+    border-width: 1px;
+}
+/*-----------------------------------------------------admin-----------------------------------------------------*/
+
+
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.admin-box {
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    padding: 2em 2em 0 0;
+}
+
+    .admin-box h3 {
+        margin-bottom: 20px;
+        padding: 0 0 0 1.3em;
+        text-align: center;
+    }
+
+.button-list {
+    list-style-type: none;
+}
+
+    .button-list li {
+        margin-bottom: 50px;
+    }
+
+.admin-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .admin-btn:hover {
+        background-color: blueviolet;
+        opacity: 0.8;
+    }
+
+/*------------------------------------------------Add-------------------------------------------------------------*/
+
+
+.add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.add-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px #66666699;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+.add-button {
+    width: 100%;
+    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .add-button:hover {
+        background-color: blueviolet;
+        opacity: 0.8;
+    }
+
+.upload-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .upload-button:hover {
+        background-color: blueviolet;
+        opacity: 0.8;
+    }
+
+#image-upload {
+    display: none;
+}
+/*---------------------------------------------Edit-------------------------------------------------------------*/
+
+
+.edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.edit-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px #66666699;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+.edit-button {
+    width: 100%;
+    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .edit-button:hover {
+        background-color: blueviolet;
+        opacity: 0.8;
+    }
+
+select {
+    padding: 0.45em;
+}
+
+/*---------------------------------------------Delete-----------------------------------------------------------*/
+
+.delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.delete-box {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px #66666699;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+.delete-button {
+    padding: 0.5em;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px #66666699;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+select {
+    padding: 0.45em;
+}

@@ -1,0 +1,17 @@
+﻿@model List<PizzaModel>
+
+<h2>Search Results for '@ViewBag.SearchTerm'</h2>
+
+@if (Model.Count == 0)
+{
+    <p>No results found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var pizzaModel in Model)
+        {
+            <li>@pizzaModel.Name - $@pizzaModel.Price</li>
+        }
+    </ul>
+}

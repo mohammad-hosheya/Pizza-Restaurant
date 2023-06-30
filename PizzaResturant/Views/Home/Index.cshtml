@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Http
+@model List<PizzaModel>
+
+    <main class="container">
+    @if (ViewBag.Username != null)
+    {
+        <p>@ViewBag.Username</p>
+    }
+
+        @foreach (var pizza in Model)
+        {
+            <div class="card">
+                <img src="~/static/@pizza.ImgPath" alt="">
+                <div class="card-body">
+                    <div class="card-body--title">
+                        <p>@pizza.Name</p>
+                        <p>$ @pizza.Price</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="/index.html" class="pick-btn"> Pick </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </main>
+    <a asp-action="Order" asp-controller="Order" class="btn"> Send Order </a>
+    <hr>
