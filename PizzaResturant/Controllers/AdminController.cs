@@ -28,9 +28,29 @@ namespace PizzaResturant.Controllers
         }
 
 
-        public IActionResult Delete(int id)
+        [HttpGet]
+        public IActionResult Delete()
         {
-            var recordToDelete = context.Pizzas.Find(id);
+
+            var Username = HttpContext.Session.GetString("Username");
+            if (Username == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+            var User = context.Users.Find(Username);
+            if (User != null && User.AdminFlag == true)
+            {
+                ViewBag.options = context.Pizzas.ToList();
+                return View();
+            }
+            return RedirectToAction("index", "home");
+
+        }
+
+        [HttpPost]
+        public IActionResult Delete(PizzaModel pizza)
+        {
+            var recordToDelete = context.Pizzas.Find(pizza.PizzaId);
 
             var Username = HttpContext.Session.GetString("Username");
             if (Username == null)

@@ -1,7 +1,9 @@
 ﻿@model PizzaModel
 
+
 <div class="delete-container">
     <div class="delete-box">
+        <form method="post">
         <table>
             <tr>
                 <th>select pizza</th>
@@ -9,13 +11,17 @@
             </tr>
             <tr>
                 <td>
-                    <select name="pizza" id="pizza">
-                        <option value="Veggie pizza">Veggie pizza</option>
-                        <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+                    <select asp-for="PizzaId" id="pizza">
+                        @foreach (var pizza in ViewBag.options)
+                        {
+                            <option value="@pizza.PizzaId" >@pizza.Name</option>
+                        }
+
                     </select>
                 </td>
                 <td><button class="delete-button">Delete</button></td>
             </tr>
         </table>
+        </form>
     </div>
 </div>
