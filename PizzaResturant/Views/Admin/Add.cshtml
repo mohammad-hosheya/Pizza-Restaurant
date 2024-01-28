@@ -1,13 +1,18 @@
 ﻿@model PizzaModel
 
+@{
+
+}
+
+<!--
     <div class="add-container">
       <div class="add-box">
         <table>
           <tr>
             <th>pizza name</th>
             <th>price</th>
-            <th></th>
-            <th></th>
+            <th>Select image</th>
+            <th> add new pizza</th>
           </tr>
           <tr>
             <td><input type="text" /></td>
@@ -15,8 +20,34 @@
             <td><input type="file" id="image-upload">
               <label for="image-upload" class="upload-button">Select File</label>
               </td>
-            <td><bu class="add-button">Add</bu</td>
+            <td><bu class="add-button">Add</bu></td>
           </tr>
         </table>
       </div>
     </div>
+    -->
+
+<div class="add-container">
+    <div class="add-box">
+        <form action="/submit-form-url" method="post">
+            <div class="form-group">
+                <label for="pizza-name">Pizza Name</label>
+                <input type="text" id="pizza-name" name="pizza-name">
+            </div><br>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price">
+            </div><br>
+
+            <div class="form-group">
+                <label for="image-upload" class="upload-button">Select Image</label>
+                <input type="file" id="image-upload" name="image-upload">
+            </div><br>
+
+            <div class="form-group">
+                <button type="submit" class="add-button">Add New Pizza</button>
+            </div><br>
+        </form>
+    </div>
+</div>

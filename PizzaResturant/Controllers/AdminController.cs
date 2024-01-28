@@ -69,5 +69,59 @@ namespace PizzaResturant.Controllers
             return RedirectToAction("index","admin");
 
         }
+
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            var Username = HttpContext.Session.GetString("Username");
+            if (Username == null)
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+            var User = context.Users.Find(Username);
+            if (User != null && User.AdminFlag == true)
+            {
+                return View(new PizzaModel()); 
+            }
+            return RedirectToAction("index", "home");
+        }
+
+        [HttpPost]
+        public IActionResult Add(PizzaModel pizza)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Pizzas.Add(pizza);
+                context.SaveChanges();
+                return RedirectToAction("Index", "admin");
+            }
+            return View(pizza);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var pizza = context.Pizzas.Find(id);
+            if (pizza == null)
+            {
+                return NotFound();
+            }
+            return View(pizza);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(PizzaModel pizza)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(pizza).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(pizza);
+        }
+
+
     }
 }
