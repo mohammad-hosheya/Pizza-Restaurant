@@ -21,10 +21,8 @@ namespace PizzaResturant.Controllers
             {
                 return RedirectToAction("Login", "Auth");
             }
-            // Pass the search term to the view for display
             ViewBag.SearchTerm = searchTerm;
 
-            // Perform the search logic and retrieve the results
             var searchResults = context.Pizzas.Where(p => p.Name.Contains(searchTerm)).ToList();
 
             return View(searchResults);

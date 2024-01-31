@@ -90,36 +90,25 @@ namespace PizzaResturant.Controllers
         [HttpPost]
         public IActionResult Add(PizzaModel pizza)
         {
-            if (ModelState.IsValid)
-            {
+          
                 context.Pizzas.Add(pizza);
                 context.SaveChanges();
                 return RedirectToAction("Index", "admin");
-            }
-            return View(pizza);
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit()
         {
-            var pizza = context.Pizzas.Find(id);
-            if (pizza == null)
-            {
-                return NotFound();
-            }
-            return View(pizza);
+            ViewBag.options = context.Pizzas.ToList();
+            return View();
         }
 
         [HttpPost]
         public IActionResult Edit(PizzaModel pizza)
         {
-            if (ModelState.IsValid)
-            {
-                context.Entry(pizza).State = EntityState.Modified;
+                context.Pizzas.Update(pizza);
                 context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(pizza);
+                return RedirectToAction("Index" ,"admin");
         }
 
 
